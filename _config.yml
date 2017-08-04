@@ -1,11 +1,11 @@
 # Basic
-title: Vno Jekyll
-subtitle: A blog-orientation theme for Jekyll
-welcome_message: <a href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>
-description: Vno Jekyll is a port of my Ghost theme vno.
-creator: <a href="http://onev.cat">@onevcat</a>
+title: Harry Lee
+subtitle: 「所有的記憶都是潮濕的」
+welcome_message: 嗨，我是秋奇，歡迎來到我的個人網誌
+description: 關注科技與人文
+creator: <a href="http://qiuqi.li">@Harry Lee</a>
 
-url: "http://vno.onevcat.com"
+url: "http://qiuqi.li"
 
 permalink: /:year/:month/:title/
 
@@ -13,17 +13,17 @@ permalink: /:year/:month/:title/
 highlighter: rouge
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color: red
+cover_color: slate
 
 # The blog button should not be removed.
 blog_button:
-    title: Blog
-    description: Visit blog
+    title: 博客
+    description: visit blog
 
 # Navigation buttons in the front page.
 nav:
-    - {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
-    # - {title: Another Button, description: A button, url: 'http://example.com'}
+    - {title: 关于, description: about me, url: 'http://qiuqi.li'}
+    - {title: 订阅, description: follow me, url: 'http://qiuqi.li'}
 
 # Pagination
 gems: [jekyll-paginate]
@@ -32,7 +32,7 @@ paginate_path: "page/:num/"
 
 # Comment
 comment:
-    disqus: vno-jekyll
+    disqus: qiuqi-li
     # duoshuo: 
     
 # Social
