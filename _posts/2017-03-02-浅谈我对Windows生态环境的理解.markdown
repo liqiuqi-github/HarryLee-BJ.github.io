@@ -1,0 +1,19 @@
+---
+layout: post
+title: 浅谈我对Windows生态环境的理解
+date: 2017-03-02 14:53:00.000000000 +09:00
+tags: Windows10||macOS
+---
+其实windows10的生态圈已经很完善了，苹果能提供的服务他几乎全部能提供，而且完全基于UWP不需要安装exe软件的前提下。
+
+我按照MacLaunchpad上的原生应用的顺序重新整理了开始菜单，发现其实所有服务都能一一对飙的，FaceTime-Skype；iMessage-消息；Siri-Cotana；Launchpad-开始菜单……就连联系人都能直接登入你的iCloud，从云端自动导入进“人脉”。
+
+所以说win 10的正确用法就是从开始菜单运行application，你的任何磁盘或文件夹都应该是你放文件的地方。
+
+我认为从win8.1开始，微软就希望用户转变使用方法，提供相对完善的生态让用户享受微软提供的服务，可惜这一步子在win8.1的时候迈的太大，用户不可能完全转变以往对于windows使用的习惯，所以他“失败”了。从win10开始，微软提供了变通的解决方案，用户可以依旧以原来使用温七、插屁的习惯去使用win10，“传统”与“新思路”并存，打开了win8.1的尴尬局面。
+
+能有微软这么个对手在，其实是美好的，如果WP销量上来，他的生态圈不一定比苹果差。
+
+![Win10_mac_compare](http://img-1252893399.costj.myqcloud.com/Win10_mac_compare.JPG)
+
+![Win10_start_magnet](http://img-1252893399.costj.myqcloud.com/Win10_start_magnet.JPG)
