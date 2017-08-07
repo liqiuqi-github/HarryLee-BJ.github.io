@@ -5,8 +5,8 @@
     <description>關注科技與人文</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Aug 2017 16:55:03 +0800</pubDate>
-    <lastBuildDate>Fri, 04 Aug 2017 16:55:03 +0800</lastBuildDate>
+    <pubDate>Mon, 07 Aug 2017 12:26:26 +0800</pubDate>
+    <lastBuildDate>Mon, 07 Aug 2017 12:26:26 +0800</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -55,6 +55,10 @@
     &lt;tr&gt;
       &lt;td&gt;July Tang&lt;/td&gt;
       &lt;td&gt;&lt;a href=&quot;http://onevcat.com&quot;&gt;http://blog.julytang.xyz&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Harry Lee&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://qiuqi.li&quot;&gt;http://qiuqi.li&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
