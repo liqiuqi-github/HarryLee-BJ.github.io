@@ -13,7 +13,3 @@ tags: Windows10||macOS
 我认为从win8.1开始，微软就希望用户转变使用方法，提供相对完善的生态让用户享受微软提供的服务，可惜这一步子在win8.1的时候迈的太大，用户不可能完全转变以往对于windows使用的习惯，所以他“失败”了。从win10开始，微软提供了变通的解决方案，用户可以依旧以原来使用温七、插屁的习惯去使用win10，“传统”与“新思路”并存，打开了win8.1的尴尬局面。
 
 能有微软这么个对手在，其实是美好的，如果WP销量上来，他的生态圈不一定比苹果差。
-
-![Win10_mac_compare](http://img-1252893399.costj.myqcloud.com/Win10_mac_compare.JPG)
-
-![Win10_start_magnet](http://img-1252893399.costj.myqcloud.com/Win10_start_magnet.JPG)

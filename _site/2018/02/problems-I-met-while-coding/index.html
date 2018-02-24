@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>浅谈我对Windows生态环境的理解</title>
-  <meta name="description" content="其实windows10的生态圈已经很完善了，苹果能提供的服务他几乎全部能提供，而且完全基于UWP不需要安装exe软件的前提下。">
+  <title>记录那些年编程时踩过的坑</title>
+  <meta name="description" content="1、Mobile端阻止DOM默认长按选中时，结果input框无法输入">
   <meta name="author" content="Wei Wang">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="浅谈我对Windows生态环境的理解">
-  <meta name="twitter:description" content="其实windows10的生态圈已经很完善了，苹果能提供的服务他几乎全部能提供，而且完全基于UWP不需要安装exe软件的前提下。">
+  <meta name="twitter:title" content="记录那些年编程时踩过的坑">
+  <meta name="twitter:description" content="1、Mobile端阻止DOM默认长按选中时，结果input框无法输入">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="浅谈我对Windows生态环境的理解">
-  <meta property="og:description" content="其实windows10的生态圈已经很完善了，苹果能提供的服务他几乎全部能提供，而且完全基于UWP不需要安装exe软件的前提下。">
+  <meta property="og:title" content="记录那些年编程时踩过的坑">
+  <meta property="og:description" content="1、Mobile端阻止DOM默认长按选中时，结果input框无法输入">
   
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
   <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://localhost:4000/2017/03/talk-about-Windows/">
+  <link rel="canonical" href="http://localhost:4000/2018/02/problems-I-met-while-coding/">
   <link rel="alternate" type="application/rss+xml" title="Harry Lee" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -161,21 +161,84 @@
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2017-03-02 13:53:00 +0800" itemprop="datePublished" class="post-meta__date date">2017-03-02</time> &#8226; <span class="post-meta__tags tags">Windows10||macOS</span>
+      <time datetime="2018-02-24 16:55:09 +0800" itemprop="datePublished" class="post-meta__date date">2018-02-24</time> &#8226; <span class="post-meta__tags tags">编程||坑||DOM||移动端适配||小程序||登录态</span>
     </div>
-    <h1 class="post-title">浅谈我对Windows生态环境的理解</h1>
+    <h1 class="post-title">记录那些年编程时踩过的坑</h1>
   </header>
 
   <section class="post">
-    <p>其实windows10的生态圈已经很完善了，苹果能提供的服务他几乎全部能提供，而且完全基于UWP不需要安装exe软件的前提下。</p>
+    <p>1、Mobile端阻止DOM默认长按选中时，结果input框无法输入</p>
 
-<p>我按照MacLaunchpad上的原生应用的顺序重新整理了开始菜单，发现其实所有服务都能一一对飙的，FaceTime-Skype；iMessage-消息；Siri-Cotana；Launchpad-开始菜单……就连联系人都能直接登入你的iCloud，从云端自动导入进“人脉”。</p>
+<p>解决办法：</p>
 
-<p>所以说win 10的正确用法就是从开始菜单运行application，你的任何磁盘或文件夹都应该是你放文件的地方。</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>*:not(input,textarea) {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+</code></pre>
+</div>
+<p>2、第三方平台文档不详细，比如腾讯云的华北与上海地区选择</p>
 
-<p>我认为从win8.1开始，微软就希望用户转变使用方法，提供相对完善的生态让用户享受微软提供的服务，可惜这一步子在win8.1的时候迈的太大，用户不可能完全转变以往对于windows使用的习惯，所以他“失败”了。从win10开始，微软提供了变通的解决方案，用户可以依旧以原来使用温七、插屁的习惯去使用win10，“传统”与“新思路”并存，打开了win8.1的尴尬局面。</p>
+<p>3、上传图片时本地展示缩略图：base64、FIleReader实例</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>let files = event.target.files;
+let reader = new FileReader();
+reader.readAsDataURL(files[0]);
+reader.onload = (e) =&gt; {
+    console.log(e);
+    this.imgURL_raw = e.target.result
+};
+</code></pre>
+</div>
+<p>4、rem为单位解决移动端适配问题</p>
 
-<p>能有微软这么个对手在，其实是美好的，如果WP销量上来，他的生态圈不一定比苹果差。</p>
+<p>5、box-sizing解决元素宽度问题</p>
+
+<p>6、flex解决流媒体布局问题</p>
+
+<p>7、小程序群ID解决同一群组用户识别的问题</p>
+
+<p>8、小程序app.js和page.js状态不同步，用setInterval监听（vuex的作用）</p>
+
+<p>9、为了与客户端作区分，需要在HTTP Header中加入自定义字段，以供后端识别为本公司H5访问的请求，用md5加密保证安全性</p>
+
+<p>10、在后端不校验登录态时，前端自己研发了一套登录态及过期的办法（非安全不推荐）</p>
+
+<p>登录时回调对本地记录：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>//            设置过期时间
+let expiryTime = new Date();
+expiryTime.setHours(expiryTime.getHours() + 12);
+console.log('过期时间', expiryTime);
+localStorage.expiryTime = expiryTime;
+</code></pre>
+</div>
+<p>跳转时校验：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>router.beforeEach((to, from, next) =&gt; {
+    // console.log('现在时间', new Date());
+    // console.log('过期时间', localStorage.expiryTime);
+    // 验证登陆状态
+    if (localStorage.loginStatus === 'login' &amp;&amp; new Date() &lt; new Date(localStorage.expiryTime)) {
+        if (to.path === '/login') {
+            return next({ path: '/dataStatistics' });
+        }
+        next();
+    } else {
+        if (to.path !== '/login') {
+            let app = new Vue();
+            app.$message({
+                type: 'info',
+                message: '登录已过期，请重新登录'
+            });
+            return next({ path: '/login' });
+        } else {
+            next();
+        }
+    }
+});
+</code></pre>
+</div>
 
   </section>
 </article>
@@ -185,12 +248,20 @@
    
    <div class="read-more-item">
        <span class="read-more-item-dim">最近的文章</span>
-       <h2 class="post-list__post-title post-title"><a href="/2018/02/problems-I-met-while-coding/" title="link to 记录那些年编程时踩过的坑">记录那些年编程时踩过的坑</a></h2>
-       <p class="excerpt">1、Mobile端阻止DOM默认长按选中时，结果input框无法输入解决办法：*:not(input,textarea) {  -webkit-user-select: none;  -moz-user-select: none;  -ms-user-select: none;  user-select: none;  -webkit-touch-callout: none;}2、第三方平台文档不详细，比如腾讯云的华北与上海地区选择3、上传图片时本地展示缩略图：base64、FIleRea...&hellip;</p>
-       <div class="post-list__meta"><time datetime="2018-02-24 16:55:09 +0800" class="post-list__meta--date date">2018-02-24</time> &#8226; <span class="post-list__meta--tags tags">编程||坑||DOM||移动端适配||小程序||登录态</span><a class="btn-border-small" href=/2018/02/problems-I-met-while-coding/>继续阅读</a></div>
+       <h2 class="post-list__post-title post-title"><a href="/2018/02/questions-while-Interview/" title="link to 面试时没答上来的题">面试时没答上来的题</a></h2>
+       <p class="excerpt">转转：1、对arr[1,2,3,4,5]实现map操作正确答案：考察点：Array.prototype 等2、css: 对div设定width：200px，这200px指的是哪里正确答案：内容区宽度。考察点：这意味着，如果我们设置一个宽度为200px，而实际呈现的盒子的宽度可能会大于200px，因为 padding + border + width（200px）= 盒子的实际宽度；可利用box-sizing设定为border-box3、模板{{}}的底层原理，独自实现如何实现；双向绑定、r...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2018-02-24 16:55:09 +0800" class="post-list__meta--date date">2018-02-24</time> &#8226; <span class="post-list__meta--tags tags">面试</span><a class="btn-border-small" href=/2018/02/questions-while-Interview/>继续阅读</a></div>
    </div>
    
    
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2017/03/talk-about-Windows/" title="link to 浅谈我对Windows生态环境的理解">浅谈我对Windows生态环境的理解</a></h2>
+       <p class="excerpt">其实windows10的生态圈已经很完善了，苹果能提供的服务他几乎全部能提供，而且完全基于UWP不需要安装exe软件的前提下。我按照MacLaunchpad上的原生应用的顺序重新整理了开始菜单，发现其实所有服务都能一一对飙的，FaceTime-Skype；iMessage-消息；Siri-Cotana；Launchpad-开始菜单……就连联系人都能直接登入你的iCloud，从云端自动导入进“人脉”。所以说win 10的正确用法就是从开始菜单运行application，你的任何磁盘或文件夹都...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2017-03-02 13:53:00 +0800" class="post-list__meta--date date">2017-03-02</time> &#8226; <span class="post-list__meta--tags tags">Windows10||macOS</span><a class="btn-border-small" href=/2017/03/talk-about-Windows/>继续阅读</a></div>
+   </div>
    
 </section>
 
@@ -200,8 +271,8 @@
     <script>
     
     var disqus_config = function () {
-        this.page.url = "http://localhost:4000/2017/03/talk-about-Windows/";
-        this.page.identifier = "/2017/03/talk-about-Windows/";
+        this.page.url = "http://localhost:4000/2018/02/problems-I-met-while-coding/";
+        this.page.identifier = "/2018/02/problems-I-met-while-coding/";
     };
 
     var disqus_shortname = 'qiuqi-li';
