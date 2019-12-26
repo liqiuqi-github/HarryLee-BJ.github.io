@@ -5,7 +5,7 @@ welcome_message: 嗨，我是秋奇，歡迎來到我的個人網誌
 description: 關注科技與人文
 creator: <a href="http://qiuqi.li">@Harry Lee</a>
 
-url: "http://qiuqi.li"
+url: "https://qiuqi.li"
 
 permalink: /:year/:month/:title/
 
@@ -22,8 +22,8 @@ blog_button:
 
 # Navigation buttons in the front page.
 nav:
-    - {title: 关于, description: about me, url: 'http://qiuqi.li'}
-    - {title: 订阅, description: follow me, url: 'http://qiuqi.li/feed.xml'}
+    - {title: 关于, description: about me, url: 'https://qiuqi.li'}
+    - {title: 订阅, description: follow me, url: 'https://qiuqi.li/feed.xml'}
 
 # Pagination
 gems: [jekyll-paginate]
@@ -38,7 +38,7 @@ comment:
 # Social
 social:
     weibo: letusq7
-    github: HarryLee-BJ
+    github: HarryLee-CN
     twitter: Qiuqi_Li
     gplus: 114002840711275844877
     mail: mail@qiuqi.li

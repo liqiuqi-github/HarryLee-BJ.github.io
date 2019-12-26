@@ -749,6 +749,11 @@ input[type="tel"] {
   color: #7b0f19;
   font-size: .8em; }
 
+.beian {
+  margin-top: 50px;
+  margin-bottom: -50px;
+  font-size: .5em; }
+
 @media all and (max-width: 1100px) {
   .panel-cover__logo {
     width: 70px; }
