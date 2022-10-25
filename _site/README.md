@@ -1,5 +1,4 @@
-欢迎访问我的个人主页 http://qiuqi.li
-
+欢迎访问我的个人主页 https://liqiuqi.cn
 
 <code>~ $ sudo gem install bundler jekyll
 
