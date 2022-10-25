@@ -5,9 +5,53 @@
     <description>關注科技與人文</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Apr 2021 13:38:47 +0800</pubDate>
-    <lastBuildDate>Thu, 15 Apr 2021 13:38:47 +0800</lastBuildDate>
+    <pubDate>Tue, 25 Oct 2022 18:11:19 +0800</pubDate>
+    <lastBuildDate>Tue, 25 Oct 2022 18:11:19 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>微信小程序云开发服务怎么关闭？</title>
+        <description>&lt;p&gt;微信小程序创建时默认选择开启云服务，要关闭该如何操作呢？&lt;/p&gt;
+
+&lt;p&gt;相信很多微信开发者最近都收到微信云服务计费调整的通知&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/010c69ed00744f5a912269c809c7a8d2.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;很多人的第一反应是云服务是什么？我没有用过，什么时候开通的？&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;来源：&lt;/strong&gt;使用微信开发者工具创建项目时，后端服务这一块会默认选择微信云开发，项目创建之后会配置一个云开发环境。
+（ps：本来有张图来着，被标记违规图片，删了。）&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;查看云服务：&lt;/strong&gt;微信开发者工具打开项目，可见菜单云服务选项&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/103a2bcb0f2b4011a1496e5921b390b1.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;点击进入云服务开发控制台&quot;&gt;点击进入云服务开发控制台：&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/373873a578314f95bc2d8d6acccede90.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;管理云开发环境&quot;&gt;管理云开发环境：&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/11f592bc5e854953b71f125c3e779d55.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;二话不说直接删除&quot;&gt;二话不说，直接删除&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/896ab0d5d1b14bc18706e788459f5a7e.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;通过管理员账号扫码验证之后删除&quot;&gt;通过管理员账号扫码验证之后删除&lt;/h4&gt;
+
+&lt;p&gt;end&lt;/p&gt;
+
+&lt;p&gt;如果对你有帮助，记得点赞噢（~~）&lt;/p&gt;
+</description>
+        <pubDate>Tue, 25 Oct 2022 16:57:09 +0800</pubDate>
+        <link>http://localhost:4000/2022/10/how-to-delete-wxmp-cloud-dev-service/</link>
+        <guid isPermaLink="true">http://localhost:4000/2022/10/how-to-delete-wxmp-cloud-dev-service/</guid>
+        
+        <category>微信小程序</category>
+        
+        
+      </item>
     
       <item>
         <title>面试时没答上来的题</title>

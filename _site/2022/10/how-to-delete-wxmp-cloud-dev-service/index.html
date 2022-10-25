@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>记录那些年编程时踩过的坑</title>
-  <meta name="description" content="1、Mobile端阻止DOM默认长按选中时，结果input框无法输入">
+  <title>微信小程序云开发服务怎么关闭？</title>
+  <meta name="description" content="微信小程序创建时默认选择开启云服务，要关闭该如何操作呢？">
   <meta name="author" content="Harry Lee">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="记录那些年编程时踩过的坑">
-  <meta name="twitter:description" content="1、Mobile端阻止DOM默认长按选中时，结果input框无法输入">
+  <meta name="twitter:title" content="微信小程序云开发服务怎么关闭？">
+  <meta name="twitter:description" content="微信小程序创建时默认选择开启云服务，要关闭该如何操作呢？">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="记录那些年编程时踩过的坑">
-  <meta property="og:description" content="1、Mobile端阻止DOM默认长按选中时，结果input框无法输入">
+  <meta property="og:title" content="微信小程序云开发服务怎么关闭？">
+  <meta property="og:description" content="微信小程序创建时默认选择开启云服务，要关闭该如何操作呢？">
 
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
   <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://localhost:4000/2018/02/problems-I-met-while-coding/">
+  <link rel="canonical" href="http://localhost:4000/2022/10/how-to-delete-wxmp-cloud-dev-service/">
   <link rel="alternate" type="application/rss+xml" title="Harry Lee" href="http://localhost:4000/feed.xml">
 
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -166,80 +166,44 @@
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2018-02-24 16:55:09 +0800" itemprop="datePublished" class="post-meta__date date">2018-02-24</time> &#8226; <span class="post-meta__tags tags">编程||坑||DOM||移动端适配||小程序||登录态</span>
+      <time datetime="2022-10-25 16:57:09 +0800" itemprop="datePublished" class="post-meta__date date">2022-10-25</time> &#8226; <span class="post-meta__tags tags">微信小程序</span>
     </div>
-    <h1 class="post-title">记录那些年编程时踩过的坑</h1>
+    <h1 class="post-title">微信小程序云开发服务怎么关闭？</h1>
   </header>
 
   <section class="post">
-    <p>1、Mobile端阻止DOM默认长按选中时，结果input框无法输入</p>
+    <p>微信小程序创建时默认选择开启云服务，要关闭该如何操作呢？</p>
 
-<p>解决办法：</p>
+<p>相信很多微信开发者最近都收到微信云服务计费调整的通知</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*:not(input,textarea) {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-}
-</code></pre></div></div>
-<p>2、第三方平台文档不详细，比如腾讯云的华北与上海地区选择</p>
+<p><img src="https://img-blog.csdnimg.cn/010c69ed00744f5a912269c809c7a8d2.png" alt="img" /></p>
 
-<p>3、上传图片时本地展示缩略图：base64、FIleReader实例</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let files = event.target.files;
-let reader = new FileReader();
-reader.readAsDataURL(files[0]);
-reader.onload = (e) =&gt; {
-    console.log(e);
-    this.imgURL_raw = e.target.result
-};
-</code></pre></div></div>
-<p>4、rem为单位解决移动端适配问题</p>
+<p>很多人的第一反应是云服务是什么？我没有用过，什么时候开通的？</p>
 
-<p>5、box-sizing解决元素宽度问题</p>
+<p><strong>来源：</strong>使用微信开发者工具创建项目时，后端服务这一块会默认选择微信云开发，项目创建之后会配置一个云开发环境。
+（ps：本来有张图来着，被标记违规图片，删了。）</p>
 
-<p>6、flex解决流媒体布局问题</p>
+<p><strong>查看云服务：</strong>微信开发者工具打开项目，可见菜单云服务选项</p>
 
-<p>7、小程序群ID解决同一群组用户识别的问题</p>
+<p><img src="https://img-blog.csdnimg.cn/103a2bcb0f2b4011a1496e5921b390b1.png" alt="img" /></p>
 
-<p>8、小程序app.js和page.js状态不同步，用setInterval监听（vuex的作用）</p>
+<h3 id="点击进入云服务开发控制台">点击进入云服务开发控制台：</h3>
 
-<p>9、为了与客户端作区分，需要在HTTP Header中加入自定义字段，以供后端识别为本公司H5访问的请求，用md5加密保证安全性</p>
+<p><img src="https://img-blog.csdnimg.cn/373873a578314f95bc2d8d6acccede90.png" alt="img" /></p>
 
-<p>10、在后端不校验登录态时，前端自己研发了一套登录态及过期的办法（非安全不推荐）</p>
+<h3 id="管理云开发环境">管理云开发环境：</h3>
 
-<p>登录时回调对本地记录：</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//            设置过期时间
-let expiryTime = new Date();
-expiryTime.setHours(expiryTime.getHours() + 12);
-console.log('过期时间', expiryTime);
-localStorage.expiryTime = expiryTime;
-</code></pre></div></div>
-<p>跳转时校验：</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>router.beforeEach((to, from, next) =&gt; {
-    // console.log('现在时间', new Date());
-    // console.log('过期时间', localStorage.expiryTime);
-    // 验证登陆状态
-    if (localStorage.loginStatus === 'login' &amp;&amp; new Date() &lt; new Date(localStorage.expiryTime)) {
-        if (to.path === '/login') {
-            return next({ path: '/dataStatistics' });
-        }
-        next();
-    } else {
-        if (to.path !== '/login') {
-            let app = new Vue();
-            app.$message({
-                type: 'info',
-                message: '登录已过期，请重新登录'
-            });
-            return next({ path: '/login' });
-        } else {
-            next();
-        }
-    }
-});
-</code></pre></div></div>
+<p><img src="https://img-blog.csdnimg.cn/11f592bc5e854953b71f125c3e779d55.png" alt="img" /></p>
+
+<h3 id="二话不说直接删除">二话不说，直接删除</h3>
+
+<p><img src="https://img-blog.csdnimg.cn/896ab0d5d1b14bc18706e788459f5a7e.png" alt="img" /></p>
+
+<h4 id="通过管理员账号扫码验证之后删除">通过管理员账号扫码验证之后删除</h4>
+
+<p>end</p>
+
+<p>如果对你有帮助，记得点赞噢（~~）</p>
 
   </section>
 </article>
@@ -247,21 +211,13 @@ localStorage.expiryTime = expiryTime;
 <section class="read-more">
    
    
-   <div class="read-more-item">
-       <span class="read-more-item-dim">最近的文章</span>
-       <h2 class="post-list__post-title post-title"><a href="/2018/02/questions-while-Interview/" title="link to 面试时没答上来的题">面试时没答上来的题</a></h2>
-       <p class="excerpt">转转：1、对arr[1,2,3,4,5]实现map操作正确答案：考察点：Array.prototype 等2、css: 对div设定width：200px，这200px指的是哪里正确答案：内容区宽度。考察点：这意味着，如果我们设置一个宽度为200px，而实际呈现的盒子的宽度可能会大于200px，因为 padding + border + width（200px）= 盒子的实际宽度；可利用box-sizing设定为border-box3、模板{{}}的底层原理，独自实现如何实现；双向绑定、r...&hellip;</p>
-       <div class="post-list__meta"><time datetime="2018-02-24 16:55:09 +0800" class="post-list__meta--date date">2018-02-24</time> &#8226; <span class="post-list__meta--tags tags">面试</span><a class="btn-border-small" href=/2018/02/questions-while-Interview/>继续阅读</a></div>
-   </div>
-   
-   
    
    
    <div class="read-more-item">
        <span class="read-more-item-dim">更早的文章</span>
-       <h2 class="post-list__post-title post-title"><a href="/2017/03/talk-about-Windows/" title="link to 浅谈我对Windows生态环境的理解">浅谈我对Windows生态环境的理解</a></h2>
-       <p class="excerpt">其实windows10的生态圈已经很完善了，苹果能提供的服务他几乎全部能提供，而且完全基于UWP不需要安装exe软件的前提下。我按照MacLaunchpad上的原生应用的顺序重新整理了开始菜单，发现其实所有服务都能一一对飙的，FaceTime-Skype；iMessage-消息；Siri-Cotana；Launchpad-开始菜单……就连联系人都能直接登入你的iCloud，从云端自动导入进“人脉”。所以说win 10的正确用法就是从开始菜单运行application，你的任何磁盘或文件夹都...&hellip;</p>
-       <div class="post-list__meta"><time datetime="2017-03-02 13:53:00 +0800" class="post-list__meta--date date">2017-03-02</time> &#8226; <span class="post-list__meta--tags tags">Windows10||macOS</span><a class="btn-border-small" href=/2017/03/talk-about-Windows/>继续阅读</a></div>
+       <h2 class="post-list__post-title post-title"><a href="/2018/02/questions-while-Interview/" title="link to 面试时没答上来的题">面试时没答上来的题</a></h2>
+       <p class="excerpt">转转：1、对arr[1,2,3,4,5]实现map操作正确答案：考察点：Array.prototype 等2、css: 对div设定width：200px，这200px指的是哪里正确答案：内容区宽度。考察点：这意味着，如果我们设置一个宽度为200px，而实际呈现的盒子的宽度可能会大于200px，因为 padding + border + width（200px）= 盒子的实际宽度；可利用box-sizing设定为border-box3、模板的底层原理，独自实现如何实现；双向绑定、react...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2018-02-24 16:55:09 +0800" class="post-list__meta--date date">2018-02-24</time> &#8226; <span class="post-list__meta--tags tags">面试</span><a class="btn-border-small" href=/2018/02/questions-while-Interview/>继续阅读</a></div>
    </div>
    
 </section>
@@ -272,8 +228,8 @@ localStorage.expiryTime = expiryTime;
     <script>
     
     var disqus_config = function () {
-        this.page.url = "http://localhost:4000/2018/02/problems-I-met-while-coding/";
-        this.page.identifier = "/2018/02/problems-I-met-while-coding/";
+        this.page.url = "http://localhost:4000/2022/10/how-to-delete-wxmp-cloud-dev-service/";
+        this.page.identifier = "/2022/10/how-to-delete-wxmp-cloud-dev-service/";
     };
 
     var disqus_shortname = 'qiuqi-li';
